@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843B2F25208F36DC0063BE1E /* AVPlayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B2F24208F36DC0063BE1E /* AVPlayerDemoViewController.m */; };
+		843B2F28208F37E10063BE1E /* RWPlayerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B2F27208F37E10063BE1E /* RWPlayerLayer.m */; };
 		84E2B0E3208E2189005F56FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2B0E2208E2189005F56FC /* AppDelegate.m */; };
 		84E2B0E6208E2189005F56FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2B0E5208E2189005F56FC /* ViewController.m */; };
 		84E2B0E9208E2189005F56FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E2B0E7208E2189005F56FC /* Main.storyboard */; };
 		84E2B0EB208E218A005F56FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E2B0EA208E218A005F56FC /* Assets.xcassets */; };
 		84E2B0EE208E218A005F56FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E2B0EC208E218A005F56FC /* LaunchScreen.storyboard */; };
 		84E2B0F1208E218A005F56FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2B0F0208E218A005F56FC /* main.m */; };
+		84E2B0F9208E267A005F56FC /* demo_00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84E2B0F7208E267A005F56FC /* demo_00.mp4 */; };
+		84E2B0FA208E267A005F56FC /* demo_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84E2B0F8208E267A005F56FC /* demo_01.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		843B2F23208F36DC0063BE1E /* AVPlayerDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerDemoViewController.h; sourceTree = "<group>"; };
+		843B2F24208F36DC0063BE1E /* AVPlayerDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerDemoViewController.m; sourceTree = "<group>"; };
+		843B2F26208F37E10063BE1E /* RWPlayerLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWPlayerLayer.h; sourceTree = "<group>"; };
+		843B2F27208F37E10063BE1E /* RWPlayerLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWPlayerLayer.m; sourceTree = "<group>"; };
 		84E2B0DE208E2189005F56FC /* AVPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E2B0E1208E2189005F56FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84E2B0E2208E2189005F56FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +34,8 @@
 		84E2B0ED208E218A005F56FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84E2B0EF208E218A005F56FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E2B0F0208E218A005F56FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84E2B0F7208E267A005F56FC /* demo_00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = demo_00.mp4; sourceTree = "<group>"; };
+		84E2B0F8208E267A005F56FC /* demo_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = demo_01.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,12 @@
 				84E2B0E2208E2189005F56FC /* AppDelegate.m */,
 				84E2B0E4208E2189005F56FC /* ViewController.h */,
 				84E2B0E5208E2189005F56FC /* ViewController.m */,
+				843B2F23208F36DC0063BE1E /* AVPlayerDemoViewController.h */,
+				843B2F24208F36DC0063BE1E /* AVPlayerDemoViewController.m */,
+				843B2F26208F37E10063BE1E /* RWPlayerLayer.h */,
+				843B2F27208F37E10063BE1E /* RWPlayerLayer.m */,
+				84E2B0F7208E267A005F56FC /* demo_00.mp4 */,
+				84E2B0F8208E267A005F56FC /* demo_01.mp4 */,
 				84E2B0E7208E2189005F56FC /* Main.storyboard */,
 				84E2B0EA208E218A005F56FC /* Assets.xcassets */,
 				84E2B0EC208E218A005F56FC /* LaunchScreen.storyboard */,
@@ -130,6 +146,8 @@
 			files = (
 				84E2B0EE208E218A005F56FC /* LaunchScreen.storyboard in Resources */,
 				84E2B0EB208E218A005F56FC /* Assets.xcassets in Resources */,
+				84E2B0F9208E267A005F56FC /* demo_00.mp4 in Resources */,
+				84E2B0FA208E267A005F56FC /* demo_01.mp4 in Resources */,
 				84E2B0E9208E2189005F56FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +161,9 @@
 			files = (
 				84E2B0E6208E2189005F56FC /* ViewController.m in Sources */,
 				84E2B0F1208E218A005F56FC /* main.m in Sources */,
+				843B2F28208F37E10063BE1E /* RWPlayerLayer.m in Sources */,
 				84E2B0E3208E2189005F56FC /* AppDelegate.m in Sources */,
+				843B2F25208F36DC0063BE1E /* AVPlayerDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
