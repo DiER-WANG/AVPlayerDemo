@@ -63,8 +63,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[AVPlayerDemoViewController class]]) {
         NSString *path = [[NSBundle mainBundle] pathForResource:(_playIndex % 2 == 0 ? @"demo_00" : @"demo_01") ofType:@"mp4"];
+        NSLog(@"%@", path);
         AVPlayerDemoViewController *demoVC = segue.destinationViewController;
-        demoVC.url = [NSURL fileURLWithPath:path];
+        demoVC.url = [NSURL URLWithString:@"https://devstreaming-cdn.apple.com/videos/tutorials/20170912/502bbcn7dmn9r/an_introduction_to_hdr_video/hls_vod_mvp.m3u8"];//[NSURL fileURLWithPath:path];
     }
 }
 
