@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <AVKit/AVPlayerViewController.h>
+#import "AVPlayerDemoViewController.h"
 
 @interface ViewController ()
 
@@ -59,8 +60,12 @@
     [self presentViewController:playerVC animated:YES completion:nil];
 }
 
-- (IBAction)playWithAVPlayer:(id)sender {
-    
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[AVPlayerDemoViewController class]]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:(_playIndex % 2 == 0 ? @"demo_00" : @"demo_01") ofType:@"mp4"];
+        AVPlayerDemoViewController *demoVC = segue.destinationViewController;
+        demoVC.url = [NSURL fileURLWithPath:path];
+    }
 }
 
 

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +30,6 @@
                                 <rect key="frame" x="156.5" y="245" width="61" height="30"/>
                                 <state key="normal" title="AVPlayer"/>
                                 <connections>
-                                    <action selector="playWithAVPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CtC-RM-1fX"/>
                                     <segue destination="UUS-zw-ln9" kind="show" id="PNs-Bh-dud"/>
                                 </connections>
                             </button>
@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="81"/>
+            <point key="canvasLocation" x="-545" y="40"/>
         </scene>
         <!--Player Demo View Controller-->
         <scene sceneID="GZO-SD-FrU">
@@ -63,21 +63,65 @@
                                     <action selector="dismiss:" destination="UUS-zw-ln9" eventType="touchUpInside" id="7Bd-uX-8ze"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-0l-w9r">
+                                <rect key="frame" x="43" y="561" width="297" height="2"/>
+                            </progressView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lAo-yH-I6E">
+                                <rect key="frame" x="41" y="599" width="301" height="31"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-i9-5Yl">
+                                <rect key="frame" x="41" y="83" width="300" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNl-kk-Ewr">
+                                <rect key="frame" x="176.5" y="468" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <state key="selected" title="Pause"/>
+                                <connections>
+                                    <action selector="playBtnClicked:" destination="UUS-zw-ln9" eventType="touchUpInside" id="Rfe-jz-DpF"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1g-CW-nHG" customClass="RWPlayerLayer">
+                                <rect key="frame" x="67" y="279.5" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m1g-CW-nHG" secondAttribute="height" multiplier="15:8" id="5PZ-e2-dmH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="o2a-ug-aiS" firstAttribute="bottom" secondItem="lAo-yH-I6E" secondAttribute="bottom" constant="38" id="04M-Md-per"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4TL-NX-vom" secondAttribute="trailing" constant="20" symbolic="YES" id="0V3-cd-KYB"/>
+                            <constraint firstItem="m1g-CW-nHG" firstAttribute="leading" secondItem="o2a-ug-aiS" secondAttribute="leading" constant="67" id="1Qm-Ab-eEJ"/>
+                            <constraint firstItem="o2a-ug-aiS" firstAttribute="trailing" secondItem="lAo-yH-I6E" secondAttribute="trailing" constant="35" id="9ve-Yt-xTw"/>
+                            <constraint firstItem="lAo-yH-I6E" firstAttribute="leading" secondItem="o2a-ug-aiS" secondAttribute="leading" constant="43" id="Amj-HH-lCK"/>
+                            <constraint firstItem="hXR-i9-5Yl" firstAttribute="leading" secondItem="o2a-ug-aiS" secondAttribute="leading" constant="43" id="Oyl-5S-dI1"/>
+                            <constraint firstItem="hXR-i9-5Yl" firstAttribute="top" secondItem="4TL-NX-vom" secondAttribute="bottom" constant="9" id="PcP-mk-TBq"/>
+                            <constraint firstItem="NLA-0l-w9r" firstAttribute="top" secondItem="KNl-kk-Ewr" secondAttribute="bottom" constant="63" id="QKg-AN-4ne"/>
                             <constraint firstItem="4TL-NX-vom" firstAttribute="leading" secondItem="o2a-ug-aiS" secondAttribute="leading" constant="16" id="Z30-El-usu"/>
+                            <constraint firstItem="NLA-0l-w9r" firstAttribute="trailing" secondItem="lAo-yH-I6E" secondAttribute="trailing" id="e4d-kA-Uaj"/>
+                            <constraint firstItem="KNl-kk-Ewr" firstAttribute="centerX" secondItem="NLA-0l-w9r" secondAttribute="centerX" id="eBf-2j-FkL"/>
+                            <constraint firstItem="NLA-0l-w9r" firstAttribute="leading" secondItem="lAo-yH-I6E" secondAttribute="leading" id="eSe-g1-wqW"/>
+                            <constraint firstItem="o2a-ug-aiS" firstAttribute="trailing" secondItem="m1g-CW-nHG" secondAttribute="trailing" constant="68" id="geo-R7-eyz"/>
+                            <constraint firstItem="o2a-ug-aiS" firstAttribute="trailing" secondItem="hXR-i9-5Yl" secondAttribute="trailing" constant="36" id="kFy-Oe-9w7"/>
                             <constraint firstItem="4TL-NX-vom" firstAttribute="top" secondItem="o2a-ug-aiS" secondAttribute="top" constant="24" id="nQl-Pd-DqR"/>
+                            <constraint firstItem="lAo-yH-I6E" firstAttribute="top" secondItem="NLA-0l-w9r" secondAttribute="bottom" constant="36" id="pWo-oe-8Qj"/>
+                            <constraint firstItem="m1g-CW-nHG" firstAttribute="centerY" secondItem="o2a-ug-aiS" secondAttribute="centerY" id="vr2-2L-L4g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o2a-ug-aiS"/>
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="4TL-NX-vom" id="00M-py-drv"/>
+                        <outlet property="cacheProgressView" destination="NLA-0l-w9r" id="jSG-gg-biB"/>
+                        <outlet property="playBtn" destination="KNl-kk-Ewr" id="Et3-Nv-Zzu"/>
+                        <outlet property="playerLayer" destination="m1g-CW-nHG" id="SVn-mr-8L7"/>
+                        <outlet property="timeSliderView" destination="lAo-yH-I6E" id="rP9-au-tF7"/>
+                        <outlet property="volumeSliderView" destination="hXR-i9-5Yl" id="UbF-v1-2Zz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQ7-Dg-MZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="32"/>
+            <point key="canvasLocation" x="1001" y="31"/>
         </scene>
     </scenes>
 </document>

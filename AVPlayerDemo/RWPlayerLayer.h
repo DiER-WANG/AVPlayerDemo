@@ -12,6 +12,6 @@
 @interface RWPlayerLayer : UIView
 
 @property AVPlayer *player;
-@property (readonly) AVPlayerLayer *playerLayer;
-
+@property (nonatomic, strong, readonly) AVPlayerLayer *playerLayer;
+@property (nonatomic, strong) NSString *videoFillMode;
 @end
